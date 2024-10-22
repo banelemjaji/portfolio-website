@@ -1,6 +1,120 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #1b1f38;
+}
+
+/* Container to hold and align content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Ensures everything is vertically centered */
+}
+
+/* Header Styles */
+header {
+    background-color: #1b1f38;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8ab4f8;
+    letter-spacing: 1px;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the navigation and dark mode toggle to the far right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Reduced gap between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative; /* Needed for the underline animation */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #aab0cf;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 10px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #8ab4f8;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover {
+    color: #8ab4f8; /* Text color change on hover */
+}
+
+/* Dark mode toggle styling */
+.dark-mode-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aab0cf;
+    margin-left: 15px; /* Space between the menu items and the toggle */
+}
+
+.dark-mode-toggle i {
+    font-size: 1.5rem; /* Adjust the icon size */
+    color: #aab0cf;    /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover i {
+    color: #8ab4f8; /* Hover color matches the logo and nav links */
+}
+
+/* Add responsiveness for mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dark-mode-toggle {
+        margin-top: 20px;
+    }
 }
