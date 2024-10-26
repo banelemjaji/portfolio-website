@@ -1,210 +1,150 @@
-body {
-    font-family: 'Oswald', sans-serif;
-    /* font-style: normal; */
+/* Apply Poppins font to the entire website */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1b1f38;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Container to hold and align content */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+body {
+    background-color: #12142b;
+}
+
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px; /* Ensures everything is vertically centered */
-}
-
-/* Header Styles */
-header {
+    padding: 15px 60px;
     background-color: #1b1f38;
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo styling */
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #8ab4f8;
-    letter-spacing: 1px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #a5b4fc;
 }
 
-/* Navigation styles */
-nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Push the navigation and dark mode toggle to the far right */
-}
-
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 20px; /* Reduced gap between nav items */
-    margin: 0;
-    padding: 0;
+    gap: 30px;
 }
 
-nav ul li {
-    position: relative; /* Needed for the underline animation */
-}
-
-nav ul li a {
+.nav-links a {
     text-decoration: none;
-    color: #aab0cf;
-    font-size: 1.3rem;
+    color: #a5b4fc;
+    font-size: 1em;
     font-weight: 400;
-    padding: 10px;
-    transition: color 0.3s ease;
-    position: relative;
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    background-color: #8ab4f8;
-    transform: scaleX(0); /* Initially hidden */
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-nav ul li a:hover {
-    color: #8ab4f8; /* Text color change on hover */
-}
-
-/* Dark mode toggle styling */
-.dark-mode-toggle {
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #aab0cf;
-    margin-left: 15px; /* Space between the menu items and the toggle */
-}
-
-.dark-mode-toggle i {
-    font-size: 1.5rem; /* Adjust the icon size */
-    color: #aab0cf;    /* Icon color */
-    transition: color 0.3s ease;
-}
-
-.dark-mode-toggle:hover i {
-    color: #8ab4f8; /* Hover color matches the logo and nav links */
-}
-
-/* Hero Section Styles */
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 30vh;
-    padding: 0 20px;
+    min-height: 75vh;
     background-color: #1b1f38;
+    padding: 40px 0;
 }
 
-.hero-content {
-    max-width: 800px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #8ab4f8;
-}
-
-.hero h1 span {
-    color: #aab0cf;
-}
-
-.hero h2 {
-    font-size: 1.5rem;
+.hero-content h1 {
+    font-size: 3.8rem;
     font-weight: 600;
-    color: #8ab4f8;
-    margin: 10px 0 20px;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 1rem;
-    color: #aab0cf;
-    margin-bottom: 30px;
+.hero-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #c3c7e4;
+    margin-bottom: 20px;
 }
 
-/* Hero Buttons */
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.hero-content p {
+    font-size: 1.1rem;
+    color: #c3c7e4;
+    margin-bottom: 40px;
 }
 
-.btn {
-    display: inline-block;
+.hero-buttons .btn,
+.icon-btn {
+    font-size: 1.1rem;
+    color: #c3c7e4;
     padding: 10px 20px;
     border: 2px solid #8ab4f8;
-    color: #8ab4f8;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.hero-buttons .btn:hover {
     background-color: #8ab4f8;
     color: #1b1f38;
 }
 
-.icon-btn {
-    display: inline-block;
+/* Projects Section */
+.projects-section {
+    padding: 80px 20px;
+    background-color: #1b1f38;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #2a2f4f;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-content h3 {
     font-size: 1.5rem;
     color: #8ab4f8;
-    transition: color 0.3s;
+    margin-bottom: 20px;
 }
 
-.icon-btn:hover {
-    color: #aab0cf;
+.card-content p {
+    font-size: 1rem;
+    color: #c3c7e4;
+    margin-bottom: 20px;
 }
 
-/* Add responsiveness for mobile */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-    }
+/* Technologies Section */
+.technologies {
+    font-size: 0.85rem;
+    color: #c3c7e4;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 10px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
 
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .dark-mode-toggle {
-        margin-top: 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-
-    .btn {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-
-    .icon-btn {
-        font-size: 1.2rem;
-    }
+.github-link {
+    font-size: 1.3rem;
+    color: #8ab4f8;
 }

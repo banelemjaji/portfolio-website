@@ -6,41 +6,79 @@
     <title>Portfolio Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">BS.</div>
-            <nav>
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="dark-mode-toggle">
-                <i class="fa-solid fa-moon"></i>
-            </div>
-        </div>
-    </header>
+<header class="navbar">
+    <div class="logo">Banele.</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="dark-mode-toggle">
+        <i class="fa-solid fa-moon"></i>
+    </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I am <span>Banele Mjaji</span>.</h1>
-            <h2>Aspiring Mobile Developer.</h2>
-            <p>
-                Adipisicing sit fugit ullam unde aliquid sequitur facilis soluta corporis nulla aspernatur. Autem eligendi rerum delectus modi.
-            </p>
-            <div class="hero-buttons">
-                <a href="#" class="btn resume-btn">resume</a>
-                <a href="https://github.com/banelemjaji" class="icon-btn"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/banelemjaji/" class="icon-btn"><i class="fab fa-linkedin"></i></a>
+<!-- Combined Hero and About Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hi, I am <span>Banele Mjaji</span>.</h1>
+        <h2>Aspiring <span id="changing-title">Software Developer</span>.</h2>
+        <p>Passionate about creating intuitive and powerful mobile applications that make a difference.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn resume-btn">Resume</a>
+            <a href="https://github.com/banelemjaji" class="icon-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/banelemjaji/" class="icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>BarberShop App</h3>
+                    <p>A booking app for appointment bookings and management.</p>
+                    <div class="technologies">Java Firebase Android</div>
+                    <a href="https://github.com/banelemjaji/barbershop_project" class="github-link" aria-label="GitHub Link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>File Organizer</h3>
+                    <p>Automatically organize files based on their content.</p>
+                    <div class="technologies">Python Automation</div>
+                    <a href="https://github.com/username/project-link" class="github-link" aria-label="GitHub Link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Bus App | In-Progress</h3>
+                    <p>A bus tracking app built using Flutter with real-time updates.</p>
+                    <div class="technologies">Flutter Dart</div>
+                    <a href="https://github.com/username/project-link" class="github-link" aria-label="GitHub Link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+<script src="js/script.js"></script>
 </body>
 </html>
