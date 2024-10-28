@@ -148,3 +148,68 @@ body {
     font-size: 1.3rem;
     color: #8ab4f8;
 }
+
+/* Skills Section */
+.skills-section {
+    padding: 80px 20px;
+    background-color: #1b1f38;
+    text-align: center;
+}
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+.skill-card {
+    background-color: #2a2f4f;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: #8ab4f8;
+    margin-bottom: 20px;
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #1b1f38;
+    text-align: center;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 2px solid #8ab4f8;
+    border-radius: 4px;
+    background-color: #2a2f4f;
+    color: #c3c7e4;
+}
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8ab4f8;
+    color: #1b1f38;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #c3c7e4;
+    color: #1b1f38;
+}
