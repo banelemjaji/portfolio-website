@@ -56,6 +56,13 @@ body {
 
 
 /* Hero Section */
+.profile-picture {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 30%; /* Makes it circular */
+    margin-bottom: 20px; /* Space below the image */
+}
+
 .hero {
     display: flex;
     justify-content: center;
@@ -69,9 +76,14 @@ body {
 .hero-content h1 {
     font-size: 3.8rem;
     font-weight: 600;
-    color: #fff;
+    background: linear-gradient(360deg, #a5b4fc, #1b1f38); /* Light blue to dark blue */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent; /* Makes text color transparent to show the gradient */
     margin-bottom: 20px;
 }
+
+
 
 .hero-content h2 {
     font-size: 1.8rem;
@@ -81,10 +93,14 @@ body {
 }
 
 .hero-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #c3c7e4;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    line-height: 1.5; /* Improved line height for readability */
+    max-width: 600px; /* Limit width for better layout */
+
 }
+
 
 /* Hero Section Buttons Hover Effect */
 .hero-buttons .btn,
