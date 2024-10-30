@@ -188,8 +188,6 @@ body {
     transition: color 0.3s ease;
 }
 
-<<<<<<< HEAD
-=======
 .github-link::after {
     content: '';
     position: absolute;
@@ -205,38 +203,12 @@ body {
     width: 100%;
 }
 
->>>>>>> refs/remotes/origin/main
 /* Skills Section */
 .skills-section {
     padding: 80px 20px;
     background-color: #1b1f38;
     text-align: center;
 }
-<<<<<<< HEAD
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-}
-.skill-card {
-    background-color: #2a2f4f;
-    padding: 20px;
-    border-radius: 8px;
-    width: 200px;
-    transition: transform 0.3s ease;
-}
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-.skill-card h3 {
-    font-size: 1.5rem;
-    color: #8ab4f8;
-    margin-bottom: 20px;
-}
-
-=======
 
 .skills-grid {
     display: flex; /* Use flexbox layout */
@@ -266,7 +238,6 @@ body {
     margin: 0;
     color: #c3c7e4;
 }
->>>>>>> refs/remotes/origin/main
 
 /* Contact Section */
 .contact-section {
@@ -302,8 +273,6 @@ body {
     background-color: #c3c7e4;
     color: #1b1f38;
 }
-<<<<<<< HEAD
-=======
 
 /* Contact Section Description */
 .contact-description {
@@ -352,4 +321,3 @@ body {
 
 
 
->>>>>>> refs/remotes/origin/main
