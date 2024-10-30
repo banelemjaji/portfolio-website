@@ -3,8 +3,8 @@ let currentTitleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-const speed = 90; // Speed of typing
-const wait = 1500; // Wait time between word changes
+const typingSpeed = 90; // Speed of typing
+const pause = 1500; // Wait time between words
 
 function typeWriterEffect() {
     const titleElement = document.getElementById("changing-title");
@@ -19,21 +19,16 @@ function typeWriterEffect() {
     }
 
     if (!isDeleting && charIndex === fullTitle.length) {
-        setTimeout(() => (isDeleting = true), wait);
+        setTimeout(() => (isDeleting = true), pause);
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         currentTitleIndex = (currentTitleIndex + 1) % titles.length;
     }
 
-    const typingSpeed = isDeleting ? speed / 2 : speed;
-    setTimeout(typeWriterEffect, typingSpeed);
+    const currentSpeed = isDeleting ? typingSpeed / 2 : typingSpeed;
+    setTimeout(typeWriterEffect, currentSpeed);
 }
 
-const hamburger = document.getElementById('hamburger');
-const sidebar = document.querySelector('.sidebar');
-
-hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('show');
+document.addEventListener("DOMContentLoaded", () => {
+    typeWriterEffect();
 });
-
-typeWriterEffect();

@@ -31,14 +31,37 @@ body {
     gap: 30px;
 }
 
+/* Navigation Links with Underline Animation */
 .nav-links a {
-    text-decoration: none;
     color: #a5b4fc;
-    font-size: 1em;
-    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #a5b4fc;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
+.profile-picture {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 30%; /* Makes it circular */
+    margin-bottom: 20px; /* Space below the image */
+}
+
 .hero {
     display: flex;
     justify-content: center;
@@ -52,9 +75,14 @@ body {
 .hero-content h1 {
     font-size: 3.8rem;
     font-weight: 600;
-    color: #fff;
+    background: linear-gradient(360deg, #a5b4fc, #1b1f38); /* Light blue to dark blue */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent; /* Makes text color transparent to show the gradient */
     margin-bottom: 20px;
 }
+
+
 
 .hero-content h2 {
     font-size: 1.8rem;
@@ -64,23 +92,29 @@ body {
 }
 
 .hero-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #c3c7e4;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    line-height: 1.5;
+    max-width: 600px;
 }
 
+
+/* Hero Section Buttons Hover Effect */
 .hero-buttons .btn,
-.icon-btn {
-    font-size: 1.1rem;
+.hero-buttons .icon-btn {
     color: #c3c7e4;
     padding: 10px 20px;
     border: 2px solid #8ab4f8;
     border-radius: 4px;
     margin-right: 10px;
-    transition: background-color 0.3s ease;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
 }
 
-.hero-buttons .btn:hover {
+.hero-buttons .btn:hover,
+.hero-buttons .icon-btn:hover {
     background-color: #8ab4f8;
     color: #1b1f38;
 }
@@ -144,17 +178,41 @@ body {
     letter-spacing: 0.05em;
 }
 
+
+/* GitHub Link with Underline Animation */
 .github-link {
     font-size: 1.3rem;
     color: #8ab4f8;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+<<<<<<< HEAD
+=======
+.github-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #8ab4f8;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.github-link:hover::after {
+    width: 100%;
+}
+
+>>>>>>> refs/remotes/origin/main
 /* Skills Section */
 .skills-section {
     padding: 80px 20px;
     background-color: #1b1f38;
     text-align: center;
 }
+<<<<<<< HEAD
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -178,6 +236,37 @@ body {
     margin-bottom: 20px;
 }
 
+=======
+
+.skills-grid {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap to new line if necessary */
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically */
+}
+
+.skill-card {
+    background-color: #2a2f4f; /* Darker background for contrast */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding inside the cards */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1 1 150px; /* Flex-grow, flex-shrink, and base width */
+    max-width: 200px; /* Max width for each card */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background-color: #8ab4f8;
+}
+
+.skill-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #c3c7e4;
+}
+>>>>>>> refs/remotes/origin/main
 
 /* Contact Section */
 .contact-section {
@@ -213,3 +302,54 @@ body {
     background-color: #c3c7e4;
     color: #1b1f38;
 }
+<<<<<<< HEAD
+=======
+
+/* Contact Section Description */
+.contact-description {
+    font-size: 1rem;
+    color: #c3c7e4;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #12142b;
+    text-align: center;
+    color: #8ab4f8;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Footer Link */
+.footer-link {
+    color: #8ab4f8;
+    text-decoration: none;
+    position: relative;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #8ab4f8;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+
+
+
+>>>>>>> refs/remotes/origin/main
